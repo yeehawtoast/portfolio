@@ -1,11 +1,13 @@
 <script setup lang="ts">
 //import { RouterLink, RouterView } from 'vue-router'
-import MainScreen from './MainScreen.vue';
+import Navbar from './components/Navbar.vue'
+import Hero from './components/Hero.vue';
 </script>
 
 <template>
   <header>
-    <MainScreen/>
+  <Navbar/>
+  <Hero/>
   </header>
 </template>
 <style>
