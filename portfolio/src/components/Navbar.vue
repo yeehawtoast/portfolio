@@ -5,18 +5,21 @@ defineProps<{
 </script>
 
 <template>
-  <div class="navbar">
-    <button class="navbut" type="button">Home</button>
-    <button class="navbut" type="button">About</button>
-    <button class="navbut" type="button">Resume</button>
-    <button class="navbut" type="button">Portfolio</button>
-    <button class="navbut" type="button">Contact Me</button>
-  </div>
+  <nav class="navbar">
+    <ul class="navigation">
+      <li><a href="google.com">About</a></li>
+      <li><a href="google.com">Experience</a></li>
+      <li><a href="google.com">Projects</a></li>
+      <li><a href="google.com">Resume</a></li>
+      <li><a href="google.com">Contact</a></li>
+    </ul>
+  </nav>
 </template>
 
 <style scoped>
 .navbar{
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   display: flex;
   justify-content: flex-end;
@@ -28,12 +31,22 @@ defineProps<{
   box-shadow: 0 4px 4px rgba(0,0,0,0.3);
   z-index: 99999999999;
 }
-.navbut{
-  background-color: #27374D;
-  color: azure;
-  border: 0px;
-  font-size: 25px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+.navigation{
+  display: flex;
+  margin-right: 5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  list-style: none;
+}
+li{
+  padding-left: 12px;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+a:hover{
+  color: #ff4d5a;
 }
 </style>

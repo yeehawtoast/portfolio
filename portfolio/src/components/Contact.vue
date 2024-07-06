@@ -5,93 +5,127 @@ defineProps<{
 </script>
 
 <template>
-  <div class="container">
-    <span class="text">This is my Contact</span>
+  <div id="contact" class="contact">
+    <h2 class="section-heading">Contact</h2>
+    <p class="contact__text">Have a question or want to work together? Leave your details and let's make something
+      happen!</p>
+    <form class="contact__form">
+      <input class="contactname" name="Name" placeholder="Name">
+      <input class="contactemail" name="_replyto" placeholder="Email">
+      <textarea class="contactmessage" name="message" placeholder="Message"></textarea>
+      <div class="formsubmit" id="form-submit">
+        <button id="form-submit" class="contactsubmit" type="button">SUBMIT</button>
+      </div>
+    </form>
 
-    <div class="yourform">
-      <form class="form">
-      <div class="title">Contact us</div>
-      <input type="text" placeholder="Your email" class="input">
-      <textarea placeholder="Your Message"></textarea>
-      <button>Submit</button>
-      </form>
-    </div>
-    
   </div>
-  
-  </template>
-  
-  <style scoped>
-  .container{
-    height: 100vh;
-  }
-  .text{
-      display: flex;
-      color: white;
-      font-family: 'Monserrat', sans-serif;
-      font-weight: bold;
-      font-size: 72px;
-      justify-content: center;
-  }
-  .yourform{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .form {
+
+
+
+</template>
+
+<style scoped>
+.contact {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  align-items: flex-start;
+  width: 500px;
   flex-direction: column;
-  gap: 10px;
-  width: 300px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  margin-bottom: 10rem;
 }
 
-.form .title {
-  color: royalblue;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  line-height: 30px;
+.section-heading {
+  position: relative;
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-top: 9rem;
+  margin-bottom: 13rem;
+  z-index: 9999;
+}
+.contact__text{
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
+}
+.contact__form{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.form input {
-  outline: 0;
-  border: 1px solid rgb(219, 213, 213);
-  padding: 8px 14px;
-  border-radius: 8px;
-  width: 90%;
-  height: 50px;
-}
-
-.form textarea {
-  border-radius: 8px;
-  height: 100px;
-  width: 90%;
+.contact input{
+  width: 500px;
   resize: none;
-  outline: 0;
-  padding: 8px 14px;
-  border: 1px solid rgb(219, 213, 213);
+  border: none;
+    border-left-width: medium;
+    border-left-style: none;
+    border-left-color: currentcolor;
+  color: inherit;
+  background-color: #282828;
+  font-size: 1.6rem;
+  font-family: monserrat, sans-serif;
+  border-left: 2px solid transparent;
+  border-radius: 0;
 }
-
-.form button {
-  align-self: flex-end;
-  padding: 8px;
-  outline: 0;
-  border: 0;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: royalblue;
-  color: #fff;
+.contactname{
+  margin-bottom: 6px;
+  padding: 1rem;
+  height: 4rem;
+}
+.contactemail{
+  margin-bottom: 6px;
+  padding: 1rem;
+  height: 4rem;
+}
+.contact textarea{
+  width: 500px;
+  resize: none;
+  border: none;
+    border-left-width: medium;
+    border-left-style: none;
+    border-left-color: currentcolor;
+  color: inherit;
+  background-color: #282828;
+  font-size: 1.6rem;
+  font-family: monserrat, sans-serif;
+  border-left: 2px solid transparent;
+  border-radius: 0;
+}
+.contactmessage{
+  height: 12rem;
+  padding: 1rem;
+}
+.formsubmit{
+  margin-top: 1.5rem;
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactsubmit{
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 1rem 1.2rem;
+  position: relative;
+  margin-top: 3rem;
   cursor: pointer;
 }
-
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
 </style>

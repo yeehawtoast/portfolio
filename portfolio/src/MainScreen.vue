@@ -10,7 +10,7 @@ import About from './components/About.vue';
 <template>
   <header>
 
-  <About/>
+  
   </header>
 </template>
 <style>
